@@ -1,15 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagavath D P | Personal Profile</title>
+  <meta name="description" content="Personal profile of Pagavath D P, a third-year Computer and Communication Engineering student at MIT Manipal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="post" action="">
-        <input type="text" name="title" placeholder="Enter the title">
-        <input type="password" name="password" id="passwd" placeholder="Enter the password">
-        <input type="submit" value="Send Data">
-    </form>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-brand" href="#top">Pagavath D P</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: photo, name, brief intro -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-role">Computer and Communication Engineering student</p>
+        <h1>Pagavath D P</h1>
+        <p class="hero-intro">
+          I'm a third-year B.Tech student at MIT Manipal who builds web apps,
+          trains small neural networks from scratch, and likes understanding
+          how signals travel. I'm looking for software engineering internships.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <!-- Replace this src with images/profile.jpg once you add your own photo to the repo -->
+        <img src="https://avatars.githubusercontent.com/u/214489141?v=4" alt="Portrait of Pagavath D P" width="320" height="320">
+      </figure>
+
+      <!-- Decaying wave: a nod to signal fading in wireless channels -->
+      <!-- <svg class="hero-wave" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0,40.0 L10,45.5 L20,50.7 L30,55.4 L40,59.5 L50,63.0 L60,65.7 L70,67.5 L80,68.6 L90,68.8 L100,68.2 L110,66.9 L120,64.9 L130,62.2 L140,59.1 L150,55.5 L160,51.6 L170,47.6 L180,43.5 L190,39.4 L200,35.5 L210,31.9 L220,28.6 L230,25.7 L240,23.4 L250,21.6 L260,20.3 L270,19.7 L280,19.6 L290,20.1 L300,21.1 L310,22.6 L320,24.5 L330,26.8 L340,29.4 L350,32.2 L360,35.1 L370,38.0 L380,40.9 L390,43.6 L400,46.1 L410,48.4 L420,50.4 L430,52.0 L440,53.3 L450,54.1 L460,54.5 L470,54.5 L480,54.1 L490,53.3 L500,52.2 L510,50.7 L520,49.1 L530,47.2 L540,45.2 L550,43.2 L560,41.1 L570,39.1 L580,37.2 L590,35.4 L600,33.8 L610,32.4 L620,31.3 L630,30.5 L640,29.9 L650,29.7 L660,29.8 L670,30.1 L680,30.7 L690,31.5 L700,32.5 L710,33.7 L720,35.1 L730,36.5 L740,38.0 L750,39.4 L760,40.9 L770,42.2 L780,43.5 L790,44.6 L800,45.5 L810,46.3 L820,46.8 L830,47.2 L840,47.3 L850,47.2 L860,47.0 L870,46.5 L880,45.9 L890,45.2 L900,44.3 L910,43.3 L920,42.3 L930,41.3 L940,40.3 L950,39.2 L960,38.3 L970,37.4 L980,36.6 L990,36.0 L1000,35.5 L1010,35.1 L1020,34.9 L1030,34.8 L1040,34.9 L1050,35.1 L1060,35.4 L1070,35.9 L1080,36.4 L1090,37.0 L1100,37.7 L1110,38.5 L1120,39.2 L1130,39.9 L1140,40.6 L1150,41.3 L1160,41.9 L1170,42.5 L1180,42.9 L1190,43.3 L1200,43.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      </svg> -->
+    </section>
+
+    <!-- About Me -->
+    <section class="section" id="about">
+      <h2>About me</h2>
+      <div class="prose">
+        <p>
+          I study Computer and Communication Engineering, which means I spend
+          my time somewhere between software and the networks it runs on. I
+          like projects where I can see the whole system: the database, the
+          server, the interface, and the maths underneath.
+        </p>
+        <p>
+          Most of my work so far is full-stack web development with Node.js and
+          PostgreSQL, plus machine learning projects in Python. I also worked on
+          wireless channel simulation, modelling Rayleigh and Rician fading and
+          building a PyTorch model to predict bit error rate and outage.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education / professional information -->
+    <section class="section" id="education">
+      <h2>Education and experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>B.Tech, Computer and Communication Engineering</h3>
+          <p class="meta">Manipal Institute of Technology (MIT Manipal) | 2024 to 2028</p>
+          <p>Currently in third year with a CGPA of 9.08.</p>
+        </li>
+        <li>
+          <h3>Research: wireless channel simulation</h3>
+          <p class="meta">Academic research project</p>
+          <p>Simulated Rayleigh and Rician fading channels and built a PyTorch model to predict bit error rate (BER) and outage probability.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Swift</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web development</h3>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind CSS</li>
+            <li>Node.js</li>
+            <li>Socket.io</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Machine learning</h3>
+          <ul class="tags">
+            <li>PyTorch</li>
+            <li>NumPy</li>
+            <li>Neural networks</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <ul class="tags">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>JWT authentication</li>
+            <li>Webhooks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (pulled from GitHub) -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/FormFlow-university-forms-platform">FormFlow</a></h3>
+          <p>A forms platform for academic institutions, with secure authentication and response collection.</p>
+          <p class="stack">JavaScript</p>
+        </article>
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/PR-Review-Bot">PR Review Bot</a></h3>
+          <p>An AI-powered GitHub pull request reviewer built on GitHub webhooks and the Gemini API.</p>
+          <p class="stack">Node.js, Gemini API</p>
+        </article>
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/Task-Board">Task Board</a></h3>
+          <p>A real-time collaborative Kanban board with JWT login and live drag-and-drop sync between users.</p>
+          <p class="stack">Node.js, Socket.io, PostgreSQL</p>
+        </article>
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/Neural-Network-From-Scratch">Neural Network From Scratch</a></h3>
+          <p>A feedforward neural network written with only NumPy, to show the maths of deep learning without high-level libraries.</p>
+          <p class="stack">Python, NumPy</p>
+        </article>
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/Hotel-Management-System-java-oop">Hotel Management System</a></h3>
+          <p>A layered Java application for managing rooms, bookings, and customers using object-oriented design.</p>
+          <p class="stack">Java</p>
+        </article>
+
+        <article class="project">
+          <h3><a href="https://github.com/pagavath-dp/Cats-And-Dogs-Classifier">Cats and Dogs Classifier</a></h3>
+          <p>An image classifier that tells cats from dogs.</p>
+          <p class="stack">Python, Jupyter Notebook</p>
+        </article>
+
+      </div>
+      <p class="more-link"><a href="https://github.com/pagavath-dp?tab=repositories">Browse all repositories on GitHub</a></p>
+    </section>
+
+    <!-- Interests / hobbies -->
+    <section class="section" id="interests">
+      <h2>Interests</h2>
+      <ul class="interest-list">
+        <li>Wireless communication and signal simulation</li>
+        <li>Building neural networks from first principles</li>
+        <li>Real-time web applications</li>
+        <li>Hardware side projects with Bluetooth Low Energy</li>
+        <li>Data structures, algorithms, and competitive programming</li>
+      </ul>
+    </section>
+
+    <!-- Contact / social links -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="contact-intro">The best way to reach me is through LinkedIn. My code is on GitHub.</p>
+      <ul class="contact-links">
+        <li><a href="https://www.linkedin.com/in/pagavath-dp/">LinkedIn: pagavath-dp</a></li>
+        <li><a href="https://github.com/pagavath-dp">GitHub: pagavath-dp</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Pagavath D P</p>
+  </footer>
+
+  <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
 </body>
 </html>
